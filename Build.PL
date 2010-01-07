@@ -3,6 +3,12 @@ use Module::Build;
 use strict;
 
 my $build = Module::Build->new(
+    meta_merge => {
+        resources => {
+            repository => 'http://github.com/rjbs/cgi-application-server',
+        },
+    },
+
     module_name => 'CGI::Application::Server',
     license => 'perl',
     requires => {
